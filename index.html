@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Card Memory Game</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        /*body, html {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+        }
+
+        h1 {
+            color: #009688;
+            padding: 1em 0;
+            font-family: monospace;
+        }
+
+        .card-wrapper {
+            list-style: none;
+            margin: 20px;
+        }
+
+        .container {
+            width: 640px;
+            margin: 0 auto;
+        }
+
+        .card {
+            position: relative;
+            transform-style: preserve-3d;
+            float: left;
+            margin: 15px;
+            width: 100px;
+            height: 140px;
+        }
+
+            .card.active {
+                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+            }
+
+            .card img {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+        /* 翻轉效果 */
+        .front {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+        }
+
+
+        .transition {
+            transition: all .5s;
+            -webkit-transition: all .5s;
+        }
+
+        .score {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #tiktok {
+            width: 400px;
+            height: 15px;
+            background: red;
+            border: 2px solid #4CAF50;
+            margin: 10px auto;
+            border-radius: 3px;
+        }
+
+        #counter {
+            width: 100%;
+            height: 100%;
+            background: white;
+            float: right;
+        }
+
+        .mask {
+            width: inherit;
+            height: 800px;
+            position: absolute;
+            top: 0;
+            z-index: 99;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .intro {
+            width: 400px;
+            height: 400px;
+            background: #F8F8C6;
+            margin: 100px auto 0px auto;
+            font-weight: bolder;
+            font-size: 18px;
+            line-height: 30px;
+            padding: 20px;
+        }
+
+            .intro button {
+                display: block;
+                padding: 15px 20px;
+                font-size: 20px;
+                cursor: pointer;
+                color: #fff;
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+                margin: 60px auto 0 auto;
+            }
+
+                .intro button:hover {
+                    background-color: #3e8e41
+                }
+
+                .intro button:active {
+                    background-color: #3e8e41;
+                    box-shadow: 0 5px #666;
+                    transform: translateY(4px);
+                }
+
+        .chk {
+            margin-left: 80px;
+        }*/
+    </style>
+</head>
+
+
+<body>
+    <h1>Tim's card memory game</h1>
+    <div class="container">
+        <div style="display:inline-block">
+            <ul class="card-wrapper">
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Luffy.png" alt="" value="Luffy">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Luffy.png" alt="" value="Luffy">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Zoro.png" alt="" value="Zoro">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Zoro.png" alt="" value="Zoro">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Sanji.png" alt="" value="Sanji">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Sanji.png" alt="" value="Sanji">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Nami.png" alt="" value="Nami">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Nami.png" alt="" value="Nami">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Usopp.png" alt="" value="Usopp">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Usopp.png" alt="" value="Usopp">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Chopper.png" alt="" value="Chopper">
+                    </div>
+                </li>
+                <li class="card transition">
+                    <div class="card_wrap">
+                        <img class="back" src="images/card.jpg">
+                        <img class="front" src="images/Chopper.png" alt="" value="Chopper">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mask">
+            <div class="intro">
+                遊戲方式：<br />
+                1.翻開卡片後記住卡片花色及位置<br />
+                2.連續翻出兩張同花色的卡片就可以獲得1點分數<br />
+                3.在時間內翻開所有的卡片即完成遊戲<br />
+                <button onclick="startGame()">開始遊戲</button>
+            </div>
+        </div>
+        <div class="chk">
+            <span>結果:</span><br />
+            <div class="score">總分：</div>
+        </div>
+    </div>
+    <div id="tiktok"><div id="counter"></div></div>
+
+    <script src="./jquery-3.5.0.min.js"></script>
+    <script src="./script.js"></script>
+   
+</body>
+
+</html>
