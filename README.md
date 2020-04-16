@@ -7,8 +7,8 @@
 
 
 * CSS
- * transition/transform
- * flex
+  * transition/transform
+  * flex
 
 * JQuery
   * setInterval/clearInterval
