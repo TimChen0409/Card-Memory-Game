@@ -1,15 +1,15 @@
 let counterWidth = 100;  //計時條長度
 let timer;        //倒數時間(亳秒)
 let counterHandle;      //計時條
-var val;//儲存第一張卡片Value
-var val2;//儲存第二張卡片Value
-var count = 0;//判斷翻卡第一次還是第二次
-var point = 0;//計算分數
+let val;//儲存第一張卡片Value
+let val2;//儲存第二張卡片Value
+let count = 0;//判斷翻卡第一次還是第二次
+let point = 0;//計算分數
 
 function startGame() {
     $(".mask").css("display", "none");
     init();//遊戲初始化
-    counterHandle = setInterval(timeCounter, 125)    //啟動計時器
+    counterHandle = setInterval(timeCounter, 100)    //啟動計時器
     chk();//卡片判斷與計分
 }
 
@@ -49,14 +49,14 @@ function chk() {
                 val2 = $(this).find('.front').attr('value');
                 count = 0;
                 if (val == val2) {
-                    $("span").text('結果：正確!⭕');
+                    $(".judge").text('結果：正確!⭕');
                     $('.card.front').addClass('active').removeClass('front');
                     point++;
                     $(".score").append('💎');
 
                 }
                 else {
-                    $("span").text('結果：錯誤!❌');
+                    $(".judge").text('結果：錯誤!❌');
                     setTimeout(function () {
                         $(".card.front").removeClass('front')
                     }, 500);
@@ -82,10 +82,17 @@ function timeCounter() {
         clearInterval(counterHandle);
         result();  //計時結束時執行結果判定
     } else {
-        timer -= 125;
-        counterWidth -= 0.42
+        timer -= 100;
+        counterWidth -= 0.33
         $("#counter").css("width", counterWidth + "%");
 
+        var number = Math.floor(timer / 1000 * 10) / 10;
+        if (number > 0) {
+            $("#timer").html("倒數計時器："+number);
+        }
+        else {
+            $("#timer").html(0);
+        }
     }
 };
 
