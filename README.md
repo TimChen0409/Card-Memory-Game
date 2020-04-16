@@ -7,11 +7,11 @@
 
 
 *CSS
->transition/transform
->flex
+  *transition/transform
+  *flex
 
 *JQuery
->setInterval/clearInterval
->setTimeout
->隨機排序：sort()+Math.random()-0.5
->移除/繫結事件處理函式
+  *setInterval/clearInterval
+  *setTimeout
+  *隨機排序：sort()+Math.random()-0.5
+  *移除/繫結事件處理函式
