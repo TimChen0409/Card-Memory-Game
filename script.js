@@ -39,7 +39,6 @@ function chk() {
             $(this).off("click");
         }
         else {
-
             $(this).addClass('front')
             if (count == 0) {
                 val = $(this).find('.front').attr('value');
