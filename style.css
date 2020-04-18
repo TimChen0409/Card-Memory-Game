@@ -8,6 +8,8 @@ body, html {
     background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
 }
 
+
+
 h1 {
     color: #009688;
     padding: 1em 0;
@@ -23,6 +25,10 @@ h1 {
     width: 640px;
     margin: 0 auto;
 }
+
+    .container .block {
+        display: inline-block
+    }
 
 .card {
     position: relative;
@@ -85,8 +91,8 @@ h1 {
 }
 
 .mask {
-    width: inherit;
-    height: 800px;
+    width: 640px;
+    height: 740px;
     position: absolute;
     top: 0;
     z-index: 99;
