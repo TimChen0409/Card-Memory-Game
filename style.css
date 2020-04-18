@@ -94,7 +94,7 @@ h1 {
 
 .mask {
     width: 640px;
-    height: 740px;
+    height: inherit;
     position: absolute;
     top: 0;
     z-index: 99;
