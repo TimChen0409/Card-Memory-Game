@@ -1,6 +1,9 @@
-body, html {
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
+}
+
+body {
     font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
     align-items: center;
     flex-direction: column;
@@ -8,6 +11,7 @@ body, html {
     background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
+    height: 100%;
     width: 100%;
 }
 
@@ -19,25 +23,28 @@ h1 {
     font-family: monospace;
 }
 
-.card-wrapper {
-    list-style: none;
-    margin: 20px;
-}
+
 
 .container {
     width: 640px;
     margin: 0 auto;
 }
 
-    .container .block {
+    .container .block ul {
         display: inline-block
     }
+
+
+.card-wrapper {
+    list-style: none;
+    margin: 20px;
+}
 
 .card {
     position: relative;
     transform-style: preserve-3d;
     float: left;
-    margin: 15px;
+    margin: 5px 25px 5px 25px;
     width: 100px;
     height: 140px;
 }
