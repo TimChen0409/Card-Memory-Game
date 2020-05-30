@@ -6,6 +6,10 @@
 ![image](https://github.com/TimChen0409/card-memory-game/blob/master/images/demo.gif)
 
 
+---
+
+### 學習紀錄
+
 * CSS
   * transition/transform
   * flex
