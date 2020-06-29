@@ -8,6 +8,8 @@ let point = 0;//計算分數
 
 function startGame() {
     $(".mask").css("display", "none");
+    $("#timer").show();
+    $("#tiktok").show();
     init();//遊戲初始化
     counterHandle = setInterval(timeCounter, 100)    //啟動計時器
     chk();//卡片判斷與計分
@@ -87,7 +89,7 @@ function timeCounter() {
 
         var number = Math.floor(timer / 1000 * 10) / 10;
         if (number > 0) {
-            $("#timer").html("倒數計時器："+number);
+            $("#timer").html("倒數計時器：" + number);
         }
         else {
             $("#timer").html(0);
@@ -102,6 +104,8 @@ function result() {
     //設定結果字串
     if (count >= 6) {
         str = "遊戲結果：恭喜完成遊戲\n<button onclick='startGame()'>繼續遊戲</button>";
+        $("#timer").hide();
+        $("#tiktok").hide();
     } else {
         str = "遊戲結果：失敗\n<button onclick='startGame()'>重新進行遊戲</button>";
     }
